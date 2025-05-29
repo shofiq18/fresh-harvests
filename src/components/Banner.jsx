@@ -17,11 +17,11 @@ export default function Banner() {
 
             {/* Banner Content */}
 
-            <div className='md:flex  flex-row justify-between items-center pt-28 md:pt-20 gap-4 w-[1200px] h-full px-4 '>
+            <div className='md:flex  flex-row justify-between items-center pt-28 md:pt-30 gap-4 w-[1200px] h-full px-4 '>
                 <div>
                     <div className="relative z-20 text-start text-black">
                         <p className='mb-4 text-[#749B3F]  bg-[#c2dfc9] inline-block'>Welcome to Fresh Harvest</p>
-                        <h1 className="text-5xl font-bold mb-4">Fresh Fruits and Vegetables</h1>
+                        <h1 className="  text-4xl md:text-6xl font-semibold mb-4">Fresh Fruits and Vegetables</h1>
                         <p className="text-sm text-gray-800 mb-6">At Fresh Harvests, we are passionate about providing you with the freshest <br /> and most flavorful fruits and vegetables.</p>
                         <button className="bg-orange-500 text-white px-8 py-4 rounded-lg hover:bg-orange-600">
                             Shop Now
@@ -36,7 +36,7 @@ export default function Banner() {
                             <button className='bg-[#176D38] text-white px-1 md:px-2 py-1 rounded-full mb-2 md:mt-2'>code:JFSDFF</button>
                         </div>
                         <div>
-                            <img className='rounded-full' src="https://i.ibb.co/N6ZHDkXx/beautiful-retro-nature-with-field-23-2149681473.jpg" alt="" width={149} height={146} />
+                            <img className='rounded-full' src="https://i.ibb.co/Jwg3jmYJ/shutterstock-1773695441-min.jpg" alt="" width={149} height={146} />
                         </div>
                     </div>
                     {/* download app section  */}

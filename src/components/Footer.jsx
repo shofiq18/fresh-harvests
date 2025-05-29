@@ -12,7 +12,7 @@ export default function Footer() {
         {/* Logo and App Download Section */}
         <div className="text-center md:text-left">
           <div className="flex items-center justify-center md:justify-start mb-4 md:mb-32">
-            <span className="text-green-600 text-3xl mr-2">🌱</span>
+            <span className="text-green-600 text-3xl mr-2">🍃</span>
             <h3 className="text-2xl font-bold text-gray-800">Fresh Harvests</h3>
           </div>
           <p className="mb-4 text-gray-600 font-medium">Download App:</p>

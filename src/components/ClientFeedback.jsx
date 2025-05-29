@@ -71,13 +71,13 @@ export default function ClientFeedback() {
                 {/* Client Feedback Carousel */}
                
                     <div className=" max-w-[1013px] mx-auto mt-4 md:my-[100px] md:flex justify-center items-center gap-8 ">
-                        <div className=" mb-4 md:mb-0 md:mr-6">
+                        <div className=" ml-24 md:ml-0 mb-4 md:mb-0 md:mr-6">
                             <Image
                                 src={testimonials[currentIndex].clientImage}
                                 alt={testimonials[currentIndex].name}
                                 width={250}
                                 height={220}
-                                className="rounded-full w-24 h-24 md:w-64 md:h-64 object-cover"
+                                className="rounded-full w-32 h-32 md:w-64 md:h-64 object-cover"
                             />
                         </div>
                         <div className="bg-[#F4F6F6] rounded-lg p-6 shadow-md max-w-lg md:max-w-xl mx-auto flex flex-col md:flex-row items-center">

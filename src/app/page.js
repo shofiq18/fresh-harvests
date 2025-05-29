@@ -1,9 +1,11 @@
+import About from "@/components/About";
 import Banner from "@/components/Banner";
 import Blog from "@/components/Blog";
 import ClientFeedback from "@/components/ClientFeedback";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navber";
 import SectionDivider from "@/components/sectionDevider";
+import SpecialOffer from "@/components/SpecialOffer";
 
 
 
@@ -14,6 +16,9 @@ export default function Home() {
     <>
       <Navbar />
       <Banner />
+      <About/>
+      <SectionDivider />
+      <SpecialOffer />
       <SectionDivider />
       <ClientFeedback />
       <SectionDivider />
