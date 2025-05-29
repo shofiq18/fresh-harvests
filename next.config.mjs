@@ -3,9 +3,23 @@
 
 
 // export default nextConfig;
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['i.ibb.co', 'upload.wikimedia.org', 'developer.apple.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.ibb.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+      },
+      {
+        protocol: 'https',
+        hostname: 'developer.apple.com',
+      },
+    ],
   },
 };
 
