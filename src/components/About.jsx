@@ -30,8 +30,8 @@ export default function About() {
                     <div className="card  w-[150px]  h-[192px] absolute bottom-0 right-[10] md:right-[120px] bg-white ">
                         <figure className="pt-2 ">
                             <img
-                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                alt="Shoes"
+                                src="https://i.ibb.co/fGQM4ZWw/shutterstock-590135870-1600x.webp"
+                                alt="fresh vegetables"
                                 className="rounded-xl w-[137] h-[110px]" />
                         </figure>
                         <div className=" text-gray-500 items-center text-center">
@@ -53,7 +53,7 @@ export default function About() {
                     <p className="text-gray-600 text-sm md:text-base mt-4">
                         We work closely with farmers to ensure every product meets our high <br /> standards of quality and sustainability. From farm to table, we’re <br /> committed to delivering freshness you can taste in every bite.
                     </p>
-                    <button className=" text-[#FF6A1A] px-6 py-3 rounded-md border border-orange-400 mt-4 text-sm md:text-base">
+                    <button className=" text-[#FF6A1A] px-6 py-3 font-bold rounded-md border border-orange-400 mt-4 text-sm md:text-base">
                         Read More
                     </button>
                 </div>
