@@ -1,9 +1,11 @@
+
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import SectionTitle from './sectionTitle';
-
+import { useRouter } from 'next/navigation';
 
 // Category mapping based on API response
 const categoryMap = {
@@ -13,9 +15,11 @@ const categoryMap = {
 };
 
 export default function FeaturedProducts() {
+  const router = useRouter();
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState('All');
   const [categories, setCategories] = useState(['All', 'Fruits', 'Salad', 'Vegetables']);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -27,25 +31,24 @@ export default function FeaturedProducts() {
         const data = await response.json();
         console.log('API Response:', data);
 
-        // Check if data.data exists and is an array
         if (!data.data || !Array.isArray(data.data)) {
           console.error('Expected an array in data.data, but got:', data.data);
           setProducts([]);
           setCategories(['All']);
+          setError('Failed to load products: Invalid data structure');
           return;
         }
 
-        // Filter out deleted products
         const activeProducts = data.data.filter(product => !product.isDeleted);
         setProducts(activeProducts);
 
-        // Extract unique categories from products
         const uniqueCategories = ['All', ...new Set(activeProducts.map(product => categoryMap[product.categoryId] || 'Unknown'))];
         setCategories(uniqueCategories);
       } catch (error) {
         console.error('Error fetching products:', error);
         setProducts([]);
         setCategories(['All']);
+        setError(`Error fetching products: ${error.message}`);
       }
     };
     fetchProducts();
@@ -55,8 +58,20 @@ export default function FeaturedProducts() {
     ? products.slice(0, 8)
     : products.filter(product => (categoryMap[product.categoryId] || 'Unknown') === category).slice(0, 8);
 
+  const handleCardClick = (id) => {
+    router.push(`/product/${id}`);
+  };
+
+  if (error) {
+    return <div className="text-center py-10 text-red-600">{error}</div>;
+  }
+
+  if (!products.length && !error) {
+    return <div className="text-center py-10">Loading...</div>;
+  }
+
   return (
-    <section className="px-4 md:px-0 ">
+    <section className="px-4 md:px-0">
       <div className="max-w-[1200px] mx-auto">
         <SectionTitle
           section="Our Products"
@@ -79,17 +94,27 @@ export default function FeaturedProducts() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product) => (
-              <div key={product.id} className="bg-white p-3 rounded-lg shadow-md text-center">
+              <div
+                key={product.id}
+                className="bg-white p-3 rounded-lg shadow-md text-center cursor-pointer"
+                onClick={() => handleCardClick(product.id)}
+              >
                 <Image
                   src={product.images[0] || 'https://via.placeholder.com/150'}
                   alt={product.productName}
                   width={258}
                   height={208}
-                  className="rounded-lg object-cover w-[149px] md:w-[258px] h-[119px]   md:h-[208px] mx-auto"
+                  className="rounded-lg object-cover w-[149px] md:w-[258px] h-[119px] md:h-[208px] mx-auto"
                 />
                 <h3 className="text-md text-gray-700 font-semibold mt-2">{product.productName}</h3>
                 <p className="text-gray-600 text-sm mt-2">${product.price.toFixed(2)}</p>
-                <button className="hover:bg-orange-500 text-gray-900 w-full  hover:text-white py-2 md:py-3  rounded-md border border-gray-300 mt-2 text-sm">
+                <button
+                  className="hover:bg-orange-500 text-gray-900 w-full hover:text-white py-2 md:py-3 rounded-md border border-gray-300 mt-2 text-sm"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    console.log(`Added ${product.productName} to cart`);
+                  }}
+                >
                   Add to Cart
                 </button>
               </div>
@@ -99,9 +124,9 @@ export default function FeaturedProducts() {
           )}
         </div>
         <div className="text-center mt-6">
-         <button className=" text-[#FF6A1A] px-6 py-3  font-bold rounded-md border border-orange-400 mt-4 text-sm md:text-base">
-                        See All Product
-                    </button>
+          <button onClick={() => router.push('/shop')} className="text-[#FF6A1A] px-6 py-3 font-bold rounded-md border border-orange-400 mt-4 text-sm md:text-base">
+            See All Products
+          </button>
         </div>
       </div>
     </section>

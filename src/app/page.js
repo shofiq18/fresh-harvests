@@ -10,7 +10,7 @@ import SpecialOffer from "@/components/SpecialOffer";
 
 
 
-import Image from "next/image";
+
 
 export default function Home() {
   return (

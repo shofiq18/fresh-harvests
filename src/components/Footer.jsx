@@ -79,7 +79,7 @@ export default function Footer() {
             </li>
           </ul>
           <div className="mt-6">
-            <p className="text-sm font-medium text-gray-600 mb-2">Accepted Payment Methods:</p>
+            <p className="text-sm text-center md:text-start font-medium text-gray-600 mb-2">Accepted Payment Methods:</p>
             <div className="flex justify-center md:justify-start gap-3">
               <Image
                 src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg"
