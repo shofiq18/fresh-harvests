@@ -11,9 +11,6 @@ Welcome to Fresh Harvests, a web application for browsing and purchasing fresh f
 ![App Screenshot](https://i.ibb.co/gctZCF0/Screenshot-13.png)
 
 
-## Live site 
-
-[Documentation](https://i.ibb.co/gctZCF0/Screenshot-13.png)
 
 
 ## Run Locally
@@ -47,8 +44,6 @@ Start the server
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`API_KEY`
 
-`ANOTHER_API_KEY`
 
 
