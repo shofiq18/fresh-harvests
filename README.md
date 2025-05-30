@@ -11,9 +11,6 @@ Welcome to Fresh Harvests, a web application for browsing and purchasing fresh f
 ![App Screenshot](https://i.ibb.co/gctZCF0/Screenshot-13.png)
 
 
-## Live site 
-
-[Fresh Harvests]([(https://fresh-harvests-sable.vercel.app/))
 
 
 ## Run Locally
