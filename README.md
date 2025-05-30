@@ -13,7 +13,7 @@ Welcome to Fresh Harvests, a web application for browsing and purchasing fresh f
 
 ## Live site 
 
-[Documentation](https://i.ibb.co/gctZCF0/Screenshot-13.png)
+[Fresh Harvests]([(https://fresh-harvests-sable.vercel.app/))
 
 
 ## Run Locally
@@ -47,8 +47,6 @@ Start the server
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`API_KEY`
 
-`ANOTHER_API_KEY`
 
 
