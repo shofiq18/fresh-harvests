@@ -20,12 +20,22 @@ export default function Banner() {
             <div className='md:flex  flex-row justify-between items-center pt-28 md:pt-30 gap-4 w-[1200px] h-full px-4 '>
                 <div>
                     <div className="relative z-20 text-start text-black">
-                        <p className='mb-4 text-[#749B3F]  bg-[#c2dfc9] inline-block'>Welcome to Fresh Harvest</p>
+                        <p className='mb-4 text-[#749B3F]  bg-[rgb(194,223,201)] inline-block'>Welcome to Fresh Harvest</p>
                         <h1 className="  text-4xl md:text-6xl font-semibold mb-4">Fresh Fruits and Vegetables</h1>
                         <p className="text-sm text-gray-800 mb-6">At Fresh Harvests, we are passionate about providing you with the freshest <br /> and most flavorful fruits and vegetables.</p>
                         <button className="bg-orange-500 text-white px-8 py-4 rounded-lg hover:bg-orange-600">
                             Shop Now
                         </button>
+                        <div className="w-24 h-12 hidden lg:block absolute ml-20 -rotate-4 mt-4 md:mt-0">
+                            <Image
+                                src="https://i.ibb.co/NBFb3X2/12-129720-red-arrow-line-png-red-hand-drawn-arrow.png"
+                                alt="Fresh Harvests"
+                                layout="fill"
+                                className="object-cover rounded-tl-full"
+                                style={{ filter: 'hue-rotate(110deg) saturate(3)' }} 
+                            />
+                        </div>
+
                     </div>
                     {/* Special Offer Section */}
                     <div className=' flex items-center mt-4 md:mt-0 ml-4 md:ml-44 justify-between  bg-gray-300 bg-opacity-80 p-2 pt-2 md:p-5 rounded-lg shadow-lg w-[200px] md:w-[331px] h-[100px] md:h-[157px]'>
@@ -67,16 +77,16 @@ export default function Banner() {
 
                 </div>
                 <div className="relative z-20 text-center text-white">
-                  <div>
-                 <Image
-                    src="https://i.ibb.co/vMRc2tt/banner-image.png"
-                    alt="Fresh Harvests Banner"
-                    width={772}
-                    height={632}
-                    className="rounded-lg opacity-70  md:h-[632px]  mt-4 md:mt-12"
-                  />
+                    <div>
+                        <Image
+                            src="https://i.ibb.co/vMRc2tt/banner-image.png"
+                            alt="Fresh Harvests Banner"
+                            width={772}
+                            height={632}
+                            className="rounded-lg opacity-70  md:h-[632px]  mt-4 md:mt-12"
+                        />
+                    </div>
                 </div>
-              </div>
             </div>
         </div>
     );
