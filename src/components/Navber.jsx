@@ -203,7 +203,7 @@ export default function Navbar() {
                   <div className="flex justify-center space-x-4">
                     <button className="border md:w-full text-center text-gray-700 border-gray-300 px-4 py-2 md:pl-16 rounded-md flex items-center">
                       <Image
-                        src="https://i.ibb.co/jvVXM7dn/Logo-google-icon-PNG.png"
+                        src="https://i.ibb.co/xtTmyTzQ/Logo-google-icon-PNG.png"
                         alt="Google"
                         width={20}
                         height={20}
@@ -275,7 +275,7 @@ export default function Navbar() {
                   <div className="flex justify-center  space-x-4">
                     <button className="border md:w-full text-center text-gray-700 border-gray-300 px-4 py-2 md:pl-16 rounded-md flex items-center">
                       <Image
-                        src="https://i.ibb.co/jvVXM7dn/Logo-google-icon-PNG.png"
+                        src="https://i.ibb.co/xtTmyTzQ/Logo-google-icon-PNG.png"
                         alt="Google"
                         width={20}
                         height={20}
