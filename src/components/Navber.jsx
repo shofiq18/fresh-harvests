@@ -9,7 +9,7 @@ import Image from 'next/image';
 export default function Navbar() {
   const [isFavoritesOpen, setIsFavoritesOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLoginModal, setIsLoginModal] = useState(true); 
+  const [isLoginModal, setIsLoginModal] = useState(true);
 
   const toggleFavoritesMenu = () => {
     setIsFavoritesOpen(!isFavoritesOpen);
@@ -17,7 +17,7 @@ export default function Navbar() {
   // Default to login when opening
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
-    if (!isModalOpen) setIsLoginModal(true); 
+    if (!isModalOpen) setIsLoginModal(true);
   };
 
   const switchModal = () => {
@@ -61,7 +61,7 @@ export default function Navbar() {
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="flex items-center cursor-pointer gap-2" onClick={toggleFavoritesMenu}>
               <span className="text-white hidden lg:block text-xl hover:text-green-600">❤️</span>
-              <p className="text-sm hidden md:block text-gray-800">Favorite</p>
+              <p className="text-sm hidden  lg:block text-gray-800">Favorite</p>
             </label>
             {isFavoritesOpen && (
               <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
@@ -163,14 +163,14 @@ export default function Navbar() {
 
             {isLoginModal ? (
               <>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Login</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-6 text-center">Login</h2>
                 <form className="space-y-4">
                   <div>
                     <label className="block text-gray-700 text-sm font-medium mb-1">Email</label>
                     <input
                       type="email"
                       name="email"
-                      className="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none"
+                      className="w-full px-4 py-2 border border-gray-200 text-gray-400 rounded-md focus:outline-none "
                       placeholder="Enter your email"
                     />
                   </div>
@@ -179,15 +179,15 @@ export default function Navbar() {
                     <input
                       type="password"
                       name="password"
-                      className="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none"
+                      className="w-full px-4 py-2 border border-gray-200 text-gray-400 rounded-md focus:outline-none"
                       placeholder="Enter your password"
                     />
                   </div>
                   <div className="flex items-center justify-between text-sm">
-                    <label className="flex items-center">
-                      <input type="checkbox" className="mr-2" /> Remember me
+                    <label className="flex items-center text-gray-700">
+                      <input type="checkbox" className="mr-2 " /> Remember me
                     </label>
-                    <a href="#" className="text-[#FF6A1A] hover:underline">Forgot Password</a>
+                    <a href="#" className="text-gray-700 underline">Forgot Password</a>
                   </div>
                   <button
                     type="submit"
@@ -195,9 +195,13 @@ export default function Navbar() {
                   >
                     Login
                   </button>
-                  <div className="text-center text-gray-600">Or Sign in with</div>
+                  <div className="flex items-center justify-center text-gray-600">
+                    <div className="flex-1 h-px bg-gray-300"></div>
+                    <span className="px-4 text-[16px]">Or Sign in with</span>
+                    <div className="flex-1 h-px bg-gray-300"></div>
+                  </div>
                   <div className="flex justify-center space-x-4">
-                    <button className="border border-gray-300 px-4 py-2 rounded-md flex items-center">
+                    <button className="border md:w-full text-center text-gray-700 border-gray-300 px-4 py-2 md:pl-16 rounded-md flex items-center">
                       <Image
                         src="https://i.ibb.co/jvVXM7dn/Logo-google-icon-PNG.png"
                         alt="Google"
@@ -207,7 +211,7 @@ export default function Navbar() {
                       />
                       Google
                     </button>
-                    <button className="border border-gray-300 px-4 py-2 rounded-md flex items-center">
+                    <button className="border md:w-full text-center text-gray-700 border-gray-300 px-4 py-2 md:pl-12 rounded-md flex items-center">
                       <Image
                         src="https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg"
                         alt="Facebook"
@@ -228,14 +232,14 @@ export default function Navbar() {
               </>
             ) : (
               <>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Register</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-6 text-center">Register</h2>
                 <form className="space-y-4">
                   <div>
                     <label className="block text-gray-700 text-sm font-medium mb-1">Full Name</label>
                     <input
                       type="text"
                       name="fullName"
-                      className="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none"
+                      className="w-full px-4 py-2 border border-gray-200 text-gray-400 rounded-md focus:outline-none"
                       placeholder="Enter your name"
                     />
                   </div>
@@ -244,7 +248,7 @@ export default function Navbar() {
                     <input
                       type="email"
                       name="email"
-                      className="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none"
+                      className="w-full px-4 py-2 border border-gray-200 text-gray-400 rounded-md focus:outline-none"
                       placeholder="Enter your email"
                     />
                   </div>
@@ -253,7 +257,7 @@ export default function Navbar() {
                     <input
                       type="password"
                       name="password"
-                      className="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none"
+                      className="w-full px-4 py-2 border border-gray-200 text-gray-400 rounded-md focus:outline-none"
                       placeholder="Enter your password"
                     />
                   </div>
@@ -263,9 +267,13 @@ export default function Navbar() {
                   >
                     Register
                   </button>
-                  <div className="text-center text-gray-600">Or Sign up with</div>
-                  <div className="flex justify-center space-x-4">
-                    <button className="border border-gray-300 px-4 py-2 rounded-md flex items-center">
+                  <div className="flex items-center justify-center text-gray-600">
+                    <div className="flex-1 h-px bg-gray-300"></div>
+                    <span className="px-4 text-[16px]">Or Sign in with</span>
+                    <div className="flex-1 h-px bg-gray-300"></div>
+                  </div>
+                  <div className="flex justify-center  space-x-4">
+                    <button className="border md:w-full text-center text-gray-700 border-gray-300 px-4 py-2 md:pl-16 rounded-md flex items-center">
                       <Image
                         src="https://i.ibb.co/jvVXM7dn/Logo-google-icon-PNG.png"
                         alt="Google"
@@ -275,7 +283,7 @@ export default function Navbar() {
                       />
                       Google
                     </button>
-                    <button className="border border-gray-300 px-4 py-2 rounded-md flex items-center">
+                    <button className="border md:w-full text-center text-gray-700 border-gray-300 px-4 py-2 md:pl-12 rounded-md flex items-center">
                       <Image
                         src="https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg"
                         alt="Facebook"

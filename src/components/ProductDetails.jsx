@@ -106,19 +106,19 @@ export default function ProductDetails() {
         {/* Image and Details Section */}
         <div className="flex flex-col md:flex-row gap-16 mb-12">
           {/* Image Section */}
-          <div className="w-full md:w-1/2 md:h-[566px] p-6 rounded-lg border border-gray-200">
+          <div className="w-full md:w-1/2 sm:h-[390px] lg:h-[566px] p-6 rounded-lg border border-gray-200">
             <Image
               src={product.images[0] || 'https://via.placeholder.com/400'}
               alt={product.productName}
               width={400}
               height={400}
-              className="rounded-lg object-cover w-full h-full md:h-[520px] mx-auto"
+              className="rounded-lg object-cover w-full h-full sm:h-[350px] lg:h-[520px] mx-auto"
               loading="lazy"
             />
           </div>
 
           {/* Details Section */}
-          <div className="w-full md:w-1/2 md:h-[566px] p-6 rounded-lg">
+          <div className=" sw-full md:w-1/2 sm:h-[390px] md:h-[566px] lg:h-[566px] p-6 rounded-lg">
             <span className="text-[#749B3F] bg-[#f1f8e6] px-3 py-1 rounded-md text-sm md:text-base">
               {categoryMap[product.categoryId] || 'Unknown'}
             </span>
@@ -156,9 +156,9 @@ export default function ProductDetails() {
             </div>
 
             {/* Actions */}
-            <div className="md:flex  gap-7">
+            <div className="lg:flex  gap-7">
               {/* Save as Favorite Button */}
-              <button className="flex items-center gap-2 mb-4 md:mb-0 px-8 py-4 w-full md:w-1/2 pl-20 md:pl-12 text-center bg-gray-100 text-gray-700 font-semibold rounded-md hover:bg-gray-200">
+              <button className="flex items-center gap-2 mb-4 lg:mb-0 px-8 py-4 w-full lg:w-1/2 pl-20 md:pl-12 text-center bg-gray-100 text-gray-700 font-semibold rounded-md hover:bg-gray-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 text-gray-400"
@@ -171,7 +171,7 @@ export default function ProductDetails() {
               </button>
 
               {/* Add to Cart Button */}
-              <button className="flex items-center gap-2 px-8 py-4 w-full md:w-1/2 pl-20 md:pl-12 text-center bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600">
+              <button className="flex items-center gap-2 px-8 py-4 w-full lg:w-1/2 pl-20 md:pl-12 text-center bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -189,7 +189,7 @@ export default function ProductDetails() {
 
         {/* Description and Review Section */}
         <div className="">
-          <div className="flex space-x-8 mb-6">
+          <div className="flex space-x-8 mb-6 sm:mt-36 lg:mt-16">
             <button
               className={`px-4 py-2 font-medium ${activeTab === 'description'
                 ? 'text-green-600 border-b-2 border-green-600'
@@ -223,7 +223,7 @@ export default function ProductDetails() {
         </div>
 
         {/* Related Products Section */}
-        <div className="my-28">
+        <div className=" mt-8 md:my-28">
           <SectionTitle
             section="Our Products"
             title="Related Products"
@@ -231,7 +231,7 @@ export default function ProductDetails() {
           />
 
           {relatedProducts.length > 0 ? (
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
               {relatedProducts.map((relatedProduct) => (
                 <div
                   key={relatedProduct.id}

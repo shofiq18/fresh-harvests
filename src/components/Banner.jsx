@@ -10,7 +10,7 @@ export default function Banner() {
     return (
         <div
             className="relative w-full  md:h-[800px] bg-cover bg-center flex items-center justify-center z-10"
-            style={{ backgroundImage: "url('https://i.ibb.co/N6ZHDkXx/beautiful-retro-nature-with-field-23-2149681473.jpg')" }}
+            style={{ backgroundImage: "url('https://i.ibb.co/8n9yHjF2/last-one.jpg')" }}
         >
             {/* Overlay for text readability */}
             <div className="absolute inset-0  bg-opacity-30"></div>
@@ -41,7 +41,7 @@ export default function Banner() {
                     </div>
                     {/* download app section  */}
                     <div className="py-5 px-3 md:px-0 font-sans ">
-                        <p className="text-lg md:text-xl text-white mb-3 text-start">Download App:</p>
+                        <p className="text-lg md:text-md text-gray-500 mb-3 text-start">Download App:</p>
                         <div className="flex  gap-3 ">
                             <Link href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer">
                                 <Image
@@ -69,11 +69,11 @@ export default function Banner() {
                 <div className="relative z-20 text-center text-white">
                   <div>
                  <Image
-                    src="https://i.ibb.co/XZ3TwPTj/istockphoto-163204423-612x612.jpg"
+                    src="https://i.ibb.co/vMRc2tt/banner-image.png"
                     alt="Fresh Harvests Banner"
                     width={772}
                     height={632}
-                    className="rounded-lg opacity-70 mt-4 md:mt-78 shadow-lg"
+                    className="rounded-lg opacity-70  md:h-[632px]  mt-4 md:mt-12"
                   />
                 </div>
               </div>
