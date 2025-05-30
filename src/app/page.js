@@ -28,7 +28,7 @@ export default function Home() {
       <SectionDivider />
       <Blog />
       <SectionDivider />
-      <Footer />
+      
     </>
   );
 }
